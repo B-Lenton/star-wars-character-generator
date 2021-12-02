@@ -1,6 +1,6 @@
 # Star Wars Character Random Generator
 
-##### A random generator of Star Wars characters written with vanilla JavaScriptCharacter 
+##### A random generator of Star Wars characters written with vanilla JavaScript
 
 - Statistics displayed using AJAX requests, made via fetch(), to call [a RESTful API](https://swapi.dev/)
 - Modal popup created with CSS and JavaScript

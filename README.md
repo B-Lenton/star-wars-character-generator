@@ -4,5 +4,5 @@
 
 - Statistics displayed using AJAX requests, made via fetch(), to call [a RESTful API](https://swapi.dev/)
 - Modal popup created with CSS and JavaScript
-- Project created for a [JavaScript course](https://www.udemy.com/course/the-ultimate-fullstack-web-development-bootcamp/) as part of a larger Full Stack Online Bootcamp
+- Project created for a JavaScript course as part of a larger [Full Stack Online Bootcamp](https://www.udemy.com/course/the-ultimate-fullstack-web-development-bootcamp/).
 

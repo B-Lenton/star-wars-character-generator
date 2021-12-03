@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="final_project_201.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Passion+One&display=swap" rel="stylesheet"> 
+    <script src="project.js" defer></script>
+    <title>SW Character Generator</title>
+</head>
+<body>
+    <div class="flexbox">
+        <header id="id">Star Wars Character Generator</header>
+        <button type="submit" class=getRandomCharacter>
+            Choose new character
+        </button>
+    </div>
+<!-- Tailwind component modified: https://tailwindcomponents.com/component/dark-stats-card -->
+   <section>
+      <div class="flex items-center justify-center mx-5 mb-1 pb-2 px-2">
+         <div class="w-full mb-2 justify-center rounded-lg text-white bg-gray-900 p-3">
+            <h3 class="text-white p-3 md:text-2xl lg:text-2xl text-lg"></h3>
+            <div class="p-5 pt-1 flex-wrap  flex items-center gap-2 justify-center">
+               <div class="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                  <div class="md:p-7 p-4">
+                     <h2 class="text-2xl text-center text-gray-200 capitalize">Films</h2>
+                     <h3 class="text-lg text-gray-400 text-center" id="films"></h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="flex items-center justify-center mx-5 my-1 p-4">
+         <div class="w-full mb-2 justify-center rounded-lg text-white bg-gray-900 p-3">
+            <h3 class="text-white p-3 md:text-2xl lg:text-2xl text-lg"></h3>
+            <div class="p-5 pt-1 flex-wrap  flex items-center gap-2 justify-center">
+               <div class="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                  <div class="md:p-7 p-4">
+                     <h2 class="text-2xl text-center text-gray-200 capitalize">Species</h2>
+                     <h3 class="text-lg text-gray-400 text-center" id="species"></h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="flex items-center justify-center mx-5 my-1 p-4">
+         <div class="w-full mb-2 justify-center rounded-lg text-white bg-gray-900 p-3">
+            <h3 class="text-white p-3 md:text-2xl lg:text-2xl text-lg"></h3>
+            <div class="p-5 pt-1 flex-wrap  flex items-center gap-2 justify-center">
+               <div class="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                  <div class="md:p-7 p-4">
+                     <h2 class="text-2xl text-center text-gray-200 capitalize">Homeworld</h2>
+                     <h3 class="text-lg  text-gray-400 text-center" id="homeworld"></h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="flex items-center justify-center mx-5 my-1 p-4">
+         <div class="w-full mb-2 justify-center rounded-lg text-white bg-gray-900 p-3">
+            <h3 class="text-white p-3 md:text-2xl lg:text-2xl text-lg"></h3>
+            <div class="p-5 pt-1 flex-wrap  flex items-center gap-2 justify-center">
+               <div class="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                  <div class="md:p-7 p-4">
+                     <h2 class="text-2xl text-center text-gray-200 capitalize">Height</h2>
+                     <h3 class="text-lg  text-gray-400  text-center" id="height"></h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="flex items-center justify-center mx-5 my-1 p-4">
+         <div class="w-full mb-2 justify-center rounded-lg text-white bg-gray-900 p-3">
+            <h3 class="text-white p-3 md:text-2xl lg:text-2xl text-lg"></h3>
+            <div class="p-5 pt-1 flex-wrap  flex items-center gap-2 justify-center">
+               <div class="bg-gradient-to-r flex-auto  w-42 h-42  from-gray-800 to-gray-700    shadow-lg    rounded-lg">
+                  <div class="md:p-7 p-4">
+                     <h2 class="text-2xl text-center text-gray-200">Eye Colour</h2>
+                     <h3 class="text-lg  text-gray-400  text-center" id="eye_color"></h3>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </section>
+
+    <div id="popup-modal" class="modal">
+        <div class="modal-content animated bounce">
+            <a class="modal-close">×</a>
+            <div class="modal-img">
+                <img src="media/star-wars.jpg" alt=""/>
+            </div>
+            <div class="modal-text">
+                <h2>Star Wars Character Generator</h2>
+                <p>
+                    Facts about your favourite characters at the touch of a button.
+                    <br />
+                    Ready to jump in? Click the cross in the top right corner and get started!
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

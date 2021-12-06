@@ -72,7 +72,7 @@ const generateCharacter = () => {
                         if (films != undefined) {
                             const parentElem = document.getElementById("films");
                             const linebreak = document.createElement("br");
-                            const node = document.createTextNode(`${films.title}`);
+                            const node = document.createTextNode(`'${films.title}'`);
                             parentElem.appendChild(node);
                             parentElem.appendChild(linebreak);
                         } else {
@@ -90,15 +90,40 @@ const generateCharacter = () => {
     }).catch((error) => {
         console.log(error);
     });
-}
+    // calling a separate, linked API to access a related image
+    fetch(`https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`)
+        .then(response => {
+            if (response.status >= 200 && response.status <= 299) {
+                return response.json();
+            } else {
+                throw new Error(response.statusText);
+            }
+        })            
+        .then(character => {
+                    if (character != undefined) {
+                        document.getElementById("character-image").setAttribute("src", `${character.image}`);
+                    } else {
+                        document.getElementById("homeworld").innerHTML = "Unknown";
+                    }
+                }).catch((error) => {
+                    console.log(error);
+                    document.getElementById("homeworld").innerHTML = "Unknown";
+                });
+        };
 // click event listener for random generator button - activates the above function
 const button = document.querySelector(".getRandomCharacter");
+const charName = document.getElementById("id");
 button.addEventListener("click", (e) => {
     e.preventDefault();
     let toClear = document.getElementById("films");
     toClear.innerHTML = ""
+    // character name load effect
+    charName.classList.add("name-generator-active");
     generateCharacter();
-})
+    setTimeout(function() {
+        charName.classList.remove("name-generator-active");
+    }, 2000);
+});
 
 // modal popup:
 let modal = document.getElementById("popup-modal");
@@ -127,7 +152,7 @@ const update = () => {
     // store the new number y axis scroll position
 	const newPos = window.pageYOffset;
 	const diff = newPos - currentPos;
-	const speed = diff * 0.5;
+	const speed = diff * 0.15;
     // call the style.transform property of <section> to skew by calculated no. of degrees
     section.style.transform = `skewY(${ speed }deg)`;
 	// set the new initial position for the next scroll
@@ -137,3 +162,4 @@ const update = () => {
 }
 
 update();
+

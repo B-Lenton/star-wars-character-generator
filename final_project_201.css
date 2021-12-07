@@ -14,8 +14,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin: auto auto;
-    justify-content: space-evenly;
-    gap: 2rem;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 #id {
@@ -34,7 +34,6 @@ body {
 #character-image {
     border-radius: 2vw;
     width: 30%;
-    margin-right: 2vw;
     margin-bottom: 1vw;
 }
 
@@ -100,14 +99,14 @@ button:hover {
 .modal-content{
     background-color: rgba(255, 255, 255, 0.9);
     width: 80%;
-    padding: 15px;
     overflow: hidden;
     position: relative;
     max-width: 750px;
     margin: auto;
     border-radius: 20px;
     border: 0px solid #fcfcfc;
-    padding: 25px;
+    padding: 10px;
+    margin-bottom: 10vw;
     border-image: url(none) 30 stretch;
 }
 
@@ -128,11 +127,12 @@ button:hover {
 
 .modal-img img{
     width: 100%;
+    border-radius: 20px;
 }
 
 .modal-text{
     text-align: center;
-    padding-top: 20px;
+    padding: 10px 5px 10px 5px;
 }
 
 .modal-text h2{
@@ -160,7 +160,7 @@ section {
 	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 15px 15px;
+	padding: 15px 15px 15vw 15px;
 	transition: transform 0.25s;
 	will-change: transform;
 }

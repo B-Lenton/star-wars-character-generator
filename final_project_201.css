@@ -6,7 +6,7 @@
 body {
     margin: 0;
     background: linear-gradient(90deg, rgb(37, 37, 37) 50%, rgb(165, 165, 165) 50%);
-    background: rgb(1, 4, 22) url("https://images.unsplash.com/photo-1501862700950-18382cd41497?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1119&q=80") no-repeat fixed center;
+    background: rgb(1, 4, 22) url("./media/stars-bg.jpg") no-repeat fixed center;
     background-size: cover;
 }
 
